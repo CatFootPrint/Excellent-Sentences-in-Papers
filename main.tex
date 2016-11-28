@@ -1,0 +1,51 @@
+% !Mode:: "TeX:UTF-8" %
+\documentclass[onecolumn,conference]{IEEEtran}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{graphics}
+\usepackage{picins}
+\usepackage{graphicx,subfigure}
+\newtheorem{Theo}{Theorem}
+\newtheorem{Lemm}{Lemma}
+\usepackage{multirow} 
+\usepackage[xetex,colorlinks,pagebackref,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{array}
+\usepackage{stfloats}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[ruled]{algorithm2e}
+\usepackage{siunitx}
+\usepackage{setspace}
+\begin{document}
+%\begin{spacing}{3.0}%%?????double-space
+\title{Main}
+\author{\IEEEauthorblockN{Kezhong Zhang}\today}
+\maketitle
+\section{Equation}
+\begin{enumerate}
+\item Substitute $\mathbf{e}i$, $\theta_i$ for $\mathbf{z}$, $\theta$ into (16), we have \cite{Lu2016}
+\item By taking into account that
+\begin{equation*}
+\Sigma_{ee}^i=\mathbf{\omega}^T\Sigma_{yy}^i\mathbf{\omega}
+\end{equation*}
+inserting (24) into $m\begin{Vmatrix}\Sigma_{ee}^i\end{Vmatrix}/\theta_i^2\leqslant \tau$ \cite{Lu2016}
+\item Starting with an initial dictionary, most of the dictionary training algorithms iterate between the \textit{Sparse Coding Stage} and \textit{Dictionary Update Stage}. \cite{Sahoo2015}
+\end{enumerate}
+\section{Table}
+\begin{enumerate}
+\item Table 3 tabulates the statistical results of ELM-MEA and MEA based on the Wilcoxon rank sum test under a 95 percent confidence level. Ave. Cost denotes the averaged cost solution, Ave.R refers to the averaged route reliabilities, and Ave.CS denotes the mean percentage computational cost savings (in terms of the number of fitness evaluation) observed on ELM-MEA to arrive at the converged optimized solution of MEA.\cite{Kasun2013}
+\end{enumerate}
+\section{ALgorithm}
+\begin{enumerate}
+\item Algorithm 1 details our proposed ELM-guided memetic computational framework for vehicle routing.\cite{Kasun2013}
+\end{enumerate}
+\bibliographystyle{IEEEtran}
+%\IEEEtriggeratref{13}
+\bibliography{reference}
+%\end{spacing}
+\end{document}

@@ -1,0 +1,69 @@
+% !Mode:: "TeX:UTF-8" %
+\documentclass[onecolumn,conference]{IEEEtran}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{comment}
+\usepackage{graphics}
+\usepackage{picins}
+\usepackage{graphicx,subfigure}
+\newtheorem{Theo}{Theorem}
+\newtheorem{Lemm}{Lemma}
+\usepackage{multirow} 
+\usepackage[xetex,colorlinks,pagebackref,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage{array}
+\usepackage{stfloats}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage[ruled]{algorithm2e}
+\usepackage{siunitx}
+\usepackage{setspace}
+\begin{document}
+%\begin{spacing}{3.0}%%?????double-space
+\title{Introduction}
+\author{\IEEEauthorblockN{Kezhong Zhang}\today}
+\maketitle
+\begin{enumerate}
+\item Given an over-complete dictionary $\mathbf{D}=\begin{bmatrix}
+\mathbf{d}_1&\cdots\mathbf{d}_K
+\end{bmatrix}\in \mathbb{R}^{5\times K}$ with $K$ atoms, sparse coding seeks to representing a feature vector $\mathbf{y}_i$ using at most $T_0$ atoms:
+\begin{equation}
+\min_{\mathbf{x}_i\in \mathbb{R}^K}
+\begin{Vmatrix}
+\mathbf{y}_i-\mathbf{D}\mathbf{x}_i
+\end{Vmatrix}_2, \qquad \text{s.t.}\quad
+\begin{Vmatrix}
+\mathbf{x}_i
+\end{Vmatrix}_0\leqslant T_0\cite{Yue2015}
+\end{equation}
+\item From a robustness point of view, sparse vectors are desired to be stable against content-preserving manipulations. \cite{Yue2015}
+\item K-SVD [27] is one of the most effective algorithms for dictionary learning, in which approximation error is minimized by alternatively updating $\mathbf{X}$ and $\mathbf{D}$. However, it does not take the mutual coherence constraint into account. \cite{Yue2015}
+\item Denote the training set by $\mathbf{V}=\left[\mathbf{v}_1,\cdots,\mathbf{v}_S\right]$, then the objective of dictionary learning can be expressed as
+\begin{equation}
+\begin{aligned}
+&\text{minimize}\quad
+\begin{Vmatrix}
+\mathbf{V-DX}
+\end{Vmatrix}_2\\
+&\text{subject to} \quad \mu\left(\mathbf{D}\right)\leqslant\mu_0;\quad \begin{Vmatrix}
+\mathbf{x}_i
+\end{Vmatrix}\leqslant T_0,1\leqslant i\leqslant S
+\end{aligned}\cite{Yue2015}
+\end{equation}
+\item Algorithm 1 \textbf{outlines} the procedures of dictionary learning. \cite{Yue2015}
+\item \textbf{In contrast to} RVFL theories for semi-randomness, ELM theories show that 
+\begin{enumerate}
+\item Generally speaking, all the hidden node parameters can be randomly generated as long as the activation function is nonlinear piecewise continuous; 
+\item all the hidden nodes can be not only independent from training samples but also \textbf{independent from} each other; 
+\item ELM theories are valid for but not limited to sigmoid networks, RBF networks, threshold networks, trigonometric networks, fuzzy inference systems, fully complex neural networks, high-order networks, ridge polynomial networks, wavelet networks, Fourier series, and biological neurons whose modeling/shapes may be unknown, \emph{etc.} [9], [10], [13].
+\end{enumerate}
+ \cite{Huang2015}
+\end{enumerate}
+\bibliographystyle{IEEEtran}
+%\IEEEtriggeratref{13}
+\bibliography{reference}
+%\end{spacing}
+\end{document}
